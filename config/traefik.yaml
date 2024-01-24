@@ -1,0 +1,19 @@
+# Docker configuration backend
+providers:
+  docker:
+    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.dd.f28.dev`)"
+
+  file:
+    directory: /proxy
+
+# API and dashboard configuration
+api:
+  insecure: true
+
+## Static configuration
+entryPoints:
+  web:
+    address: ":80"
+
+  websecure:
+    address: ":443"
