@@ -16,6 +16,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./config/traefik.yml:/etc/traefik/traefik.yml
+      - ./acme:/etc/traefik/acme
+      - ./cert:/app/cert
       - ./proxy:/proxy
     restart: always
     networks:
