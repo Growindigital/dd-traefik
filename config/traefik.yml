@@ -25,17 +25,8 @@ entryPoints:
 
 certificatesResolvers:
   myresolver:
-    # Enable ACME (Let's Encrypt): automatic SSL.
     acme:
-
-      # Email address used for registration.
-      #
-      # Required
-      #
       email: "info@f28.nl"
-
-      # File or key used for certificates storage.
-      #
-      # Required
-      #
       storage: "/etc/traefik/acme/acme.json"
+      httpChallenge:
+        entryPoint: web
