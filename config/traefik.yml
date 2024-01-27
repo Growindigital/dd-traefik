@@ -2,10 +2,14 @@
 providers:
   docker:
     defaultRule: "Host(`{{ trimPrefix `/` .Name }}.dd.f28.dev`)"
+    network: traefik
 
   file:
     directory: /proxy
     watch: true
+
+log:
+  level: INFO
 
 # API and dashboard configuration
 api:
