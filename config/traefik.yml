@@ -9,7 +9,7 @@ providers:
     watch: true
 
 log:
-  level: DEBUG
+  level: ERROR
 
 # API and dashboard configuration
 api:
