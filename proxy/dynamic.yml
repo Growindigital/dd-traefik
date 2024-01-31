@@ -1,5 +1,6 @@
 http:
-  http-to-https:
+  routers:
+    http-to-https:
       entryPoints:
         - web
       middlewares:
