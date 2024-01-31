@@ -1,7 +1,7 @@
 # Docker configuration backend
 providers:
   docker:
-    defaultRule: "Host(`{{ trimPrefix `/` .ContainerName }}._srv.doc-doc.app`)"
+    defaultRule: "Host(`{{ trimPrefix `/` .ContainerName }}.dd.f28.dev`)"
     network: traefik
 
   file:
