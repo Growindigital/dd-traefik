@@ -12,7 +12,7 @@ services:
     ports:
       - 80:80
       - 443:443
-      - 8080:8080
+      # - 8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./config/traefik.yml:/etc/traefik/traefik.yml
@@ -22,6 +22,7 @@ services:
     networks:
       - traefik
     labels:
+      - traefik.enabled=false
       - traefik.http.services.traefik.loadbalancer.server.port=8080
       - traefik.http.routers.traefik.entrypoints=websecure
       - traefik.http.routers.traefik.middlewares=auth@file
